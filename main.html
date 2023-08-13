@@ -1,0 +1,79 @@
+<html>
+<head>
+<style>
+
+body{
+ background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  opacity: 100;
+}
+#background-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+</style>
+<script>
+        function validate()
+        {
+		var username = document.getElementById('name').value;
+		var username1 = document.getElementById('pass').value;
+		var username2 = document.getElementById('rollno').value;
+		if (username == "" || username1 == "" || username2 == "") {
+			alert("Please fill in all fields");
+			return false;
+	}
+		if (!/^[a-zA-Z]*$/g.test(name)) {
+			alert("Name fields should only contain letters");
+			return false;
+	}
+		alert("Welcome "+username);
+		return true;
+        }
+    </script>
+</head>
+<body>
+<video id="background-video" autoplay loop muted>
+<source src="v1.mp4" type="video/mp4">
+</video>
+
+    <center>
+	<h1>SIGN IN PAGE</h1>
+    <table style="margin-top:100px; margin-left:10px;">
+        <form name="myForm" action="nextpage.html">
+            <tr>
+                <td>
+                   <b><label>Name</label>
+                </td>
+                <td><input type="text" id="name" />
+                </td>
+            </tr>
+            <tr>
+                <td><b><label>Password</label>
+                </td>
+                <td><input type="password" id="pass" />
+                </td>
+            </tr>
+            <tr>
+                <td><b><label>Roll Number </label>
+                </td>
+                <td><input type="text" id="rollno" />
+                </td>
+            </tr>
+		<tr>
+		<td>
+			<center><input type="Submit" value="submit" onclick="validate()"></center>
+		</td>
+		</tr>
+        </form>
+</center>
+    </table>
+</body>
+</html>
